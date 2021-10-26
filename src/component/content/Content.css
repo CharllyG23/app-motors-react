@@ -1,0 +1,116 @@
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
+
+.container {
+    width: 100%;
+    height: 88vh;
+    background-color: rgb(241, 241, 241);
+}
+
+/* box  search car & moto*/  
+.box{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 50px;
+}
+  
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 933px;
+    max-height: 312px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 15%);
+}
+.tag-btn{
+    display: flex;   
+}
+
+.tag-letf{
+    display: flex;
+    margin-right:325px;   
+}
+
+/* button  */
+
+.btn-car {
+    background-color: #f1f1f1;
+    border: none;
+    display: inline-flex;
+    color: #c90815;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 15px 48px;
+    text-transform: uppercase;
+    justify-content: center;
+    border-bottom: 3px solid #c90815;
+    }
+
+.btn-moto {
+    background-color: #f1f1f1;
+    border: none;
+    display: inline-flex;
+    color: rgb(134, 133, 133);
+    cursor: pointer;
+    font-size: 18px;
+    padding: 15px 43px;
+    text-transform: uppercase;
+    justify-content: center;
+    
+    }
+
+.btn-sell {
+    background-color: #f1f1f1;
+    border: none;
+    color: rgb(235, 175, 11);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 40px;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid rgb(235, 175, 11);
+    margin-bottom: 15px;
+    
+}
+
+/* form  */
+
+.form{
+    margin: 50px;
+}
+
+.first-line input[type=checkbox]{
+        background-color: #0000;
+        cursor: default;
+        appearance: auto;
+        box-sizing: border-box;
+        margin: 3px 3px 3px 4px;
+        padding: initial;
+        border: initial;
+    
+    
+}
+
+.second-line{
+    display: flex;
+
+}
+
+.third-line{
+    display: flex;
+
+}
+    
+.fourth-line{
+    display: flex;
+
+}
