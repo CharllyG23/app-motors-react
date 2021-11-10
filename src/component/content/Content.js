@@ -1,6 +1,8 @@
 import React from "react";
 import './Content.css'
 import { MdOutlineTwoWheeler, MdDirectionsCar } from "react-icons/md";
+import axios from "axios";
+
 
 const Home = () => {
 
@@ -9,70 +11,85 @@ const Home = () => {
            <div className="box">
                <div className="tag-btn">
                     <div className="tag-letf">
-                        <button href="#" className="btn-car"><MdDirectionsCar style={{ fontSize: '25', marginRight: '10' }} />Carros</button>
-                        <button href="#" className="btn-moto"><MdOutlineTwoWheeler style={{ fontSize: '25', marginRight: '10' }} />Motos</button>
+                        <a href="/" className="btn-car"><MdDirectionsCar style={{ fontSize: '25', marginRight: '10' }} />Carros</a>
+                        <a href="/" className="btn-moto"><MdOutlineTwoWheeler style={{ fontSize: '25', marginRight: '10' }} />Motos</a>
                     </div>
-
-                       <button href="#" className="btn-sell">Vender meu carro</button>
+                    <button type="button" className="btn-sell">Vender meu carro</button>
                </div>
                 <div className="search-wrapper">
                    <form className="form">
                         <div className="first-line">
-                            <input type="checkbox" name="my-checkbox1" id="opt-in1"/>
-                            <label htmlFor="opt-in1">Novo</label>
-                            <input type="checkbox" name="my-checkbox2" id="opt-in2"/>
-                            <label htmlFor="opt-in2">Usado</label>
-                        </div>
-                        <div className="second-line">
-                            <div>
-                                <input type="text" id="lname" name="lastname" placeholder="Your last name.."/>
-                                <select id="country" name="country">
-                                <option value="australia">Australia</option>
-                                <option value="canada">Canada</option>
-                                <option value="usa">USA</option>
-                                </select>
+                            <div className="input-checkbox">
+                                <input id="teste1" type="checkbox" />
+                                <label htmlFor="teste1">Novos</label>
                             </div>
                             <div>
-                                <select id="country" name="country">
-                                <option value="australia">Australia</option>
-                                <option value="canada">Canada</option>
-                                <option value="usa">USA</option>
-                                </select>
-                                <select id="country" name="country">
-                                <option value="australia">Australia</option>
-                                <option value="canada">Canada</option>
-                                <option value="usa">USA</option>
-                                </select>
+                                <input id="teste2" type="checkbox" />
+                                <label htmlFor="teste2">Usados</label>
+                            </div>
+                        </div>
+                        <div className="second-line">
+                                <div className="form1">
+                                    <input type="text" id="search" name="search" className="input-geral input-search" placeholder="Onde: "/>
+                                    <button type="reset">&times;</button>
+                                
+                                    <select id="country" name="country" className="main-select input-geral">
+                                        <option value="australia">Raio:</option>
+                                        <option value="australia">Australia</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="usa">USA</option>
+                                    </select>
+                                </div>    
+                            <div className="input-double">
+                                <div>
+                                    <select id="country" name="country" className="select-marca input-geral">
+                                        <option value="australia">Australia</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="usa">USA</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select id="country" name="country" className="select-modelo input-geral">
+                                        <option value="australia">Australia</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="usa">USA</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div className="third-line">
-                            <div>
-                                <select id="country" name="country">
+                            <div className="select-double">
+                                <select id="country" name="country" className="select-ano input-geral">
                                 <option value="australia">Australia</option>
                                 <option value="canada">Canada</option>
                                 <option value="usa">USA</option>
                                 </select>
-                                <select id="country" name="country">
+                                <select id="country" name="country" className="select-price input-geral">
                                 <option value="australia">Australia</option>
                                 <option value="canada">Canada</option>
                                 <option value="usa">USA</option>
                                 </select>
                             </div>
                             <div>
-                                <select id="country" name="country">
+                                <select id="country" name="country" className="select-version input-geral" >
                                 <option value="australia">Australia</option>
                                 <option value="canada">Canada</option>
                                 <option value="usa">USA</option>
                                 </select>
                             </div>
                         </div>
-                        <div className="fourth-line">
-                            <div>
+                        <div className="fourth-line" >
+                            <div className="p-search">
                                 <span>Busca Avançada</span>
                             </div>
-                            <div>
-                                <button href="#" >Limpiar filtros</button>
-                                <button>Ver Oferta</button>
+                            
+                            <div className="btn-double">
+                                <div>
+                                    <button className="btn-filter">Limpar filtros</button>
+                                </div>
+                               <div>
+                                    <button className="btn-offers">Ver Oferta</button>
+                                </div>
                             </div>
                         </div>
                    </form>

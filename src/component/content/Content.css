@@ -6,6 +6,10 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
 }
 
+a{
+    text-decoration: none;
+}
+
 .container {
     width: 100%;
     height: 88vh;
@@ -36,7 +40,7 @@ body{
 
 .tag-letf{
     display: flex;
-    margin-right:325px;   
+    margin-right:334px;   
 }
 
 /* button  */
@@ -79,38 +83,206 @@ body{
     justify-content: center;
     border: 2px solid rgb(235, 175, 11);
     margin-bottom: 15px;
+    border-radius: 3px;
     
 }
 
 /* form  */
 
 .form{
-    margin: 50px;
+    margin: 30px 50px;
 }
-
-.first-line input[type=checkbox]{
-        background-color: #0000;
-        cursor: default;
-        appearance: auto;
-        box-sizing: border-box;
-        margin: 3px 3px 3px 4px;
-        padding: initial;
-        border: initial;
-    
-    
-}
-
-.second-line{
+.form1 {
     display: flex;
-
+    position: relative;
+  }
+  
+.form1 input {
+    width: 290px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  
+  .form1 input:placeholder-shown+button {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .form1 button {
+    position: absolute;
+    border: none;
+    display: block;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 16px;
+    border-radius: 50%;
+    top: 12px;
+    bottom: 0;
+    margin-right: 120px;
+    margin-left: 50px;
+    right: 1px;
+    color: #ffff;
+    background: #ddd;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    transition: .1s;
 }
 
+/* style input-geral */
+.form .input-geral{
+    height: 40px;
+    border: 1px solid #cfd9e6;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 8%);
+    padding: 5px 10px ;
+    color: #666666;
+    font-size: 12px;
+    border-radius: 3px;
+
+}
+    /* first-line 1  checkbox */
+.first-line{
+    display: flex;
+    }
+
+    /* checkbox */
+
+.input-checkbox{
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  
+  input[type="checkbox"] + label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 25px;
+    font-size: 13px;
+  }
+
+
+  input[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    bottom: 3px;
+    border: 1px solid #cfcfcf;
+    vertical-align: bottom;
+  }
+
+  input[type="checkbox"]:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    bottom: 8px;
+    width: 4px;
+    height: 8px;
+    border-right: solid 2px #c90815;
+    border-bottom: solid 2px #c90815;
+    transform: rotate(45deg);
+}
+
+ /* second-line 2  search */
+
+.search-wrapper .form .second-line{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.search-wrapper  .form .second-line .input-search{
+    border-right: none;
+}
+.search-wrapper .form .second-line .main-select{
+    width:110px; 
+}
+
+.search-wrapper .form .second-line .input-double{
+    display: flex;
+}
+
+.search-wrapper .form .second-line .input-double .select-marca{
+    width:200px;
+    margin-right: 15px;
+}
+
+.search-wrapper .form .second-line .input-double .select-modelo{
+    width:200px;
+}
+
+.search-wrapper .form .second-line .input-double .select-modelo option{
+    width:170px;
+}
+
+/* third-line 3 all, years */
 .third-line{
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+} 
 
+.third-line .select-ano{
+    width:193px;
+    margin-right: 15px;
 }
-    
+  
+.third-line .select-price{
+    width:193px;  
+}
+
+.third-line .select-version{
+    width:415px;
+}
+
+/* fourth-line 4 all */
+
 .fourth-line{
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
 
+.fourth-line .p-search{
+    font-size: 14px;
+    color: #c90815;
+    font-weight: 600;
+}
+
+.fourth-line .btn-filter{
+    margin-right: 74px;
+    background: none;
+    border: none;
+    padding: 15px 0 0 0;
+    cursor: pointer;
+    color: #949494;
+}
+
+.fourth-line .btn-offers{
+    background-color: #c90815;
+    border: none;
+    display: inline-flex;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 12px 75px;
+    font-weight: 500;
+    text-transform: uppercase;
+    justify-content: center;
+    border-radius: 4px; 
+}
+
+.btn-double{
+    display: flex;
 }
